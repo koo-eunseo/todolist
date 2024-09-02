@@ -18,16 +18,43 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* 기본적인 드래그 앤 드롭 스타일을 추가합니다. */
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* 직접 작성한 CSS 주석 처리 */
+.dragging {
+  /* opacity: 0.5;
+  background-color: #e0e0e0; */
+}
+
+.placeholder {
+  /* background-color: #f0f0f0;
+  height: 50px; */
 }
